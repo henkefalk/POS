@@ -1,0 +1,33 @@
+package DBHandler;
+
+import java.util.*;
+
+import model.ItemIdentifier;
+
+
+
+public class ItemCatalog {
+	
+	 HashMap <ItemIdentifier, Item> itemCatalog = new HashMap <ItemIdentifier, Item>();
+	
+	 /**
+	  * Creates a HashMap with the Items the store has for sale
+	  */
+	 public ItemCatalog(){
+	 Item cucumber = new Item("Cucumber", 15, new ItemIdentifier(1));
+	 itemCatalog.put(cucumber.getItemIdentifier(), cucumber);
+	 
+	 Item lemon = new Item("Lemon", 6, new ItemIdentifier(2));
+	 itemCatalog.put(lemon.getItemIdentifier(), lemon);
+	 
+	 Item apple = new Item("Apple", 10, new ItemIdentifier(3));
+	 itemCatalog.put(apple.getItemIdentifier(), apple);
+	 
+	 Item watermelon = new Item("Watermelon", 33, new ItemIdentifier(4));
+	 itemCatalog.put(watermelon.getItemIdentifier(), watermelon);
+	 
+	 Item kiwi = new Item("Kiwi", 10, new ItemIdentifier(5));
+	 itemCatalog.put(kiwi.getItemIdentifier(), kiwi);
+	  
+	 }
+}

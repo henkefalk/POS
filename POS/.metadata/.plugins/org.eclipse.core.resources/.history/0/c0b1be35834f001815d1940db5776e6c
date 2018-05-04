@@ -1,0 +1,28 @@
+package DBHandler;
+
+import model.ItemIdentifier;
+
+public class Item {
+	String itemName;
+	double itemPrice;
+	ItemIdentifier itemIdentifier;
+	
+	/**
+	 * Takes in 
+	 * @param itemName	The name of the item in the catalog
+	 * @param price	
+	 * @param identifier
+	 */
+	
+	
+	public Item(String itemName, double price, ItemIdentifier identifier) {
+		this.itemName = itemName;
+		itemPrice = price;
+		this.itemIdentifier = identifier;
+	}
+	
+	public ItemIdentifier getItemIdentifier() {
+		return itemIdentifier;
+	}
+	
+}

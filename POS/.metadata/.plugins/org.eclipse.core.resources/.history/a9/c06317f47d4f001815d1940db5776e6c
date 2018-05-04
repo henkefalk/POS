@@ -1,0 +1,14 @@
+package model;
+
+public class ItemIdentifier {
+	int itemIdentifier;
+	
+	public ItemIdentifier(int identifier) {
+		itemIdentifier = identifier;
+	}
+	
+	public boolean equals(Object objectToCompare) {
+		if(objectToCompare instanceof ItemIdentifierDTO)
+	}
+	
+}

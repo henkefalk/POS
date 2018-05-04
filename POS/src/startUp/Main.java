@@ -1,0 +1,27 @@
+package startUp;
+
+import DBHandler.Printer;
+import DBHandler.ItemCatalog;
+import controller.Controller;
+import view.View;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//1. create printer (kan skippas och skrivas som externt system)
+		Printer printer = new Printer();
+		
+		//2. create item catalog
+		ItemCatalog itemCatalog = new ItemCatalog();
+		
+		//3. create controller
+		Controller controller = new Controller(printer);
+		
+		//4. create view
+		View view = new View(controller);
+		
+		view.sampleExecution();
+	}
+
+}

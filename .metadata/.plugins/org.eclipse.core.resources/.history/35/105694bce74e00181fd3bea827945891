@@ -1,0 +1,18 @@
+package controller;
+
+import DBHandler.Printer;
+import model.Sale;
+
+public class Controller {
+	private Sale sale;
+	
+	//constructor
+	public Controller(Printer printer) {
+		
+	}
+	
+	public void startSale(){
+		this.sale = new Sale();
+			
+	}
+}

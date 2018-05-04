@@ -1,0 +1,28 @@
+package DBHandler;
+
+import model.ItemIdentifier;
+
+public class Item {
+	String itemName;
+	double itemPrice;
+	ItemIdentifier itemIdentifier;
+	
+	/**
+	 * This class represents an item in the store 
+	 * @param itemName		The name of the item up for sale
+	 * @param price			The price of the item set by the store
+	 * @param identifier	An object that identifies the item
+	 */
+	
+	
+	public Item(String itemName, double price, ItemIdentifier identifier) {
+		this.itemName = itemName;
+		itemPrice = price;
+		this.itemIdentifier = identifier;
+	}
+	
+	public ItemIdentifier getItemIdentifier() {
+		return itemIdentifier;
+	}
+	
+}

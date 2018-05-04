@@ -1,0 +1,20 @@
+package model;
+
+import DBHandler.Item;
+
+public class SaleDTO {
+	double runningTotal;
+	Item latestScannedItem;
+	
+	public SaleDTO(double runningTotal, Item newItem) {
+		this.runningTotal = runningTotal;
+		latestScannedItem = newItem;
+	}
+	
+	public String toString() {
+		String printOut = latestScannedItem.getName();
+		printOut += "   " + Double.toString(latestScannedItem.getPrice()); 
+		printOut += "   " + Double.toString(runningTotal);
+		return printOut;
+	}
+}

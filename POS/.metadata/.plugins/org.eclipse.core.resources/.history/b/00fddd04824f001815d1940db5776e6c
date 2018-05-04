@@ -1,0 +1,17 @@
+package DBHandler;
+
+import java.util.*;
+
+import model.ItemIdentifierDTO;
+
+public class ItemCatalog {
+	
+	public ItemCatalog(){
+		createItemCatalog();
+	}
+	
+	private static void createItemCatalog() {
+		 HashMap <ItemIdentifierDTO, ItemInfo> itemCatalog = new hashmap <ItemidentifierDTO, ItemInfo>();
+	}
+	
+}

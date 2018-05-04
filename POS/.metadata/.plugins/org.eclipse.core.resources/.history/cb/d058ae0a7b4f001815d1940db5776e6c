@@ -1,0 +1,13 @@
+package DBHandler;
+
+public class ItemInfo {
+	String itemName;
+	double itemPrice;
+	
+	public ItemInfo(String itemName, double price) {
+		this.itemName = itemName;
+		itemPrice = price;
+	}
+	
+	
+}

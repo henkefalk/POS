@@ -1,0 +1,10 @@
+package view;
+
+public class ItemIdentifierDTO {
+	int itemIdentifier;
+	
+	public ItemIdentifierDTO(int identifier) {
+		itemIdentifier = identifier;
+	}
+	
+}

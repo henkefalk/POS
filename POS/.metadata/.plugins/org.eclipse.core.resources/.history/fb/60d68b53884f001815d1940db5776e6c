@@ -1,0 +1,30 @@
+package startUp;
+
+import DBHandler.Printer;
+import DBHandler.ItemCatalog;
+import controller.Controller;
+import dataBase.InventorySystem;
+import view.View;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//1. create inventory system
+		InventorySystem inventorySystem = new InventorySystem();
+		
+		//2. create printer
+		Printer printer = new Printer();
+		
+		//3. create item catalog
+		ItemCatalog itemCatalog = new ItemCatalog();
+		
+		//4. create controller
+		Controller controller = new Controller(printer);
+		
+		//5. create view
+		View view = new View(controller);
+		
+		view.sampleExecution();
+	}
+
+}
