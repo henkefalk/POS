@@ -17,6 +17,7 @@ public class View {
 		System.out.println("Starting sample execution");
 		controller.startSale();
 		SaleDTO saleDTO = controller.registerItem(new ItemIdentifier(1));
+		System.out.println(saleDTO.toString());
 		
 		
 		
