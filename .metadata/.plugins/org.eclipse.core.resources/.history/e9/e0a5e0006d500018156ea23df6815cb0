@@ -1,0 +1,30 @@
+package model;
+
+import DBHandler.ItemDTO;
+
+public class SaleDTO {
+	double runningTotal;
+	ItemDTO lastScannedItem;
+	
+	public SaleDTO(double runningTotal, ItemDTO newItem) {
+		this.runningTotal = runningTotal;
+		lastScannedItem = newItem;
+	}
+	
+	
+	/**
+	 * returns the name of the last scanned item, the items price and the running total as a String
+	 */
+	public String toString() {
+		String printOut = "Item: " + lastScannedItem.getName() + "\n";
+		printOut += "Price: " + Double.toString(lastScannedItem.getPrice()) + "\n"; 
+		printOut += "Running Total" + Double.toString(runningTotal);
+		return printOut;
+	}
+	
+	public double getPrice() {
+		return runningTotal;
+	}
+	
+	
+}

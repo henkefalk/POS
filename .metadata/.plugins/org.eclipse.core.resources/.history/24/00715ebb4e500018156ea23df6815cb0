@@ -1,0 +1,32 @@
+package DBHandler;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import model.ItemIdentifierDTO;
+
+public class ItemCatalogTester {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void getItemFromIDTest() {
+		//fail("Not yet implemented");
+		double delta = 1;
+		ItemCatalog itemCatalog = new ItemCatalog();
+		ItemIdentifierDTO itemID = new ItemIdentifierDTO(1);
+		ItemDTO Item = itemCatalog.getItem(itemID);
+		
+		assertEquals(15, Item.getPrice(), delta);
+	}
+
+}

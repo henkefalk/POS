@@ -1,0 +1,29 @@
+package controller;
+
+import DBHandler.ItemCatalog;
+import DBHandler.ItemDTO;
+import DBHandler.Printer;
+import model.ItemIdentifierDTO;
+import model.Sale;
+import model.SaleDTO;
+
+public class Controller {
+	private Sale sale;
+	
+	//constructor
+	public Controller(Printer printer) {
+		
+	}
+	
+	/**
+	 * creates a new instance of a sale
+	 */
+	public void startSale(){
+		this.sale = new Sale();
+	}
+	
+	public SaleDTO registerItem(ItemIdentifierDTO itemToBePurchased) {
+		ItemDTO newScannedItem = itemCatalog.getItem(itemToBePurchased);
+		
+	}
+}

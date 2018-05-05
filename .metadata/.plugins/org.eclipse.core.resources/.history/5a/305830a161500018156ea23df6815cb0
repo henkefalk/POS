@@ -1,0 +1,11 @@
+package DBHandler;
+
+public class ItemCatalogCreator {
+	ItemCatalog itemCatalog;
+	
+	public ItemCatalogCreator() {
+		this.itemCatalog = new ItemCatalog();
+	}
+	
+	
+}

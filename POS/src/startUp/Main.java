@@ -1,7 +1,6 @@
 package startUp;
 
-import DBHandler.Printer;
-import DBHandler.ItemCatalog;
+import DBHandler.ItemCatalogCreator;
 import controller.Controller;
 import view.View;
 
@@ -9,16 +8,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//1. create printer (kan skippas och skrivas som externt system)
-		Printer printer = new Printer();
+		ItemCatalogCreator itemCatalogCreator = new ItemCatalogCreator();
 		
-		//2. create item catalog
-		ItemCatalog itemCatalog = new ItemCatalog();
 		
-		//3. create controller
-		Controller controller = new Controller(printer);
+		Controller controller = new Controller(itemCatalogCreator);
 		
-		//4. create view
 		View view = new View(controller);
 		
 		view.sampleExecution();

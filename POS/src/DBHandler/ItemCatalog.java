@@ -2,32 +2,42 @@ package DBHandler;
 
 import java.util.*;
 
-import model.ItemIdentifier;
+import model.ItemIdentifierDTO;
 
 
 
 public class ItemCatalog {
+
+	HashMap <ItemIdentifierDTO, ItemDTO> itemCatalog = new HashMap <ItemIdentifierDTO, ItemDTO>();
 	
-	 HashMap <ItemIdentifier, Item> itemCatalog = new HashMap <ItemIdentifier, Item>();
+	/**
+	 * Creates a HashMap with the Items the store has for sale
+	 */
+	public ItemCatalog(){
+		
+		
+		ItemDTO cucumber = new ItemDTO("Cucumber", 15, new ItemIdentifierDTO(1));
+		itemCatalog.put(cucumber.getItemIdentifier(), cucumber);
+
+		ItemDTO lemon = new ItemDTO("Lemon", 6, new ItemIdentifierDTO(2));
+		itemCatalog.put(lemon.getItemIdentifier(), lemon);
+
+		ItemDTO apple = new ItemDTO("Apple", 10, new ItemIdentifierDTO(3));
+		itemCatalog.put(apple.getItemIdentifier(), apple);
+
+		ItemDTO watermelon = new ItemDTO("Watermelon", 33, new ItemIdentifierDTO(4));
+		itemCatalog.put(watermelon.getItemIdentifier(), watermelon);
+
+		ItemDTO kiwi = new ItemDTO("Kiwi", 5, new ItemIdentifierDTO(5));
+		itemCatalog.put(kiwi.getItemIdentifier(), kiwi);
+
+	}
 	
-	 /**
-	  * Creates a HashMap with the Items the store has for sale
-	  */
-	 public ItemCatalog(){
-	 Item cucumber = new Item("Cucumber", 15, new ItemIdentifier(1));
-	 itemCatalog.put(cucumber.getItemIdentifier(), cucumber);
-	 
-	 Item lemon = new Item("Lemon", 6, new ItemIdentifier(2));
-	 itemCatalog.put(lemon.getItemIdentifier(), lemon);
-	 
-	 Item apple = new Item("Apple", 10, new ItemIdentifier(3));
-	 itemCatalog.put(apple.getItemIdentifier(), apple);
-	 
-	 Item watermelon = new Item("Watermelon", 33, new ItemIdentifier(4));
-	 itemCatalog.put(watermelon.getItemIdentifier(), watermelon);
-	 
-	 Item kiwi = new Item("Kiwi", 5, new ItemIdentifier(5));
-	 itemCatalog.put(kiwi.getItemIdentifier(), kiwi);
-	  
-	 }
+	/**
+	 * @param itemIdentifier the itemIdentifier of the new item to be purchased
+	 * @return The Item with matching identifier from the ItemCatalog
+	 */
+	public ItemDTO getItem(ItemIdentifierDTO itemIdentifier) {
+		return itemCatalog.get(itemIdentifier);
+	}
 }

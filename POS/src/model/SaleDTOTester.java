@@ -2,17 +2,19 @@ package model;
 
 import static org.junit.Assert.*;
 
+import java.util.HashMap;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import DBHandler.Item;
+import DBHandler.ItemDTO;
 
 public class SaleDTOTester {
 
 	@Before
 	public void setUp() throws Exception {
-		//Item cucumber = new Item("Cucumber", 15, new ItemIdentifier(1));
+		//ItemDTO cucumber = new ItemDTO("Cucumber", 15, new ItemIdentifierDTO(1));
 		//double runningTotal = 20;
 		//SaleDTO saleDTO = new SaleDTO(runningTotal, cucumber);
 	}
@@ -22,16 +24,16 @@ public class SaleDTOTester {
 	}
 
 	@Test
-	public void toStringTest1() {
+	public void toStringTest() {
 		//fail("Not yet implemented");
-		Item cucumber = new Item("Cucumber", 15, new ItemIdentifier(1));
+		ItemDTO cucumber = new ItemDTO("Cucumber", 15, new ItemIdentifierDTO(1));
 		double runningTotal = 20;
-		SaleDTO saleDTO = new SaleDTO(runningTotal, cucumber);
+		HashMap<ItemDTO, Integer> ScannedItems = new HashMap <ItemDTO, Integer>();
+		SaleDTO saleDTO = new SaleDTO(runningTotal, cucumber, ScannedItems);
 		
 		String out = saleDTO.toString();
 		
 		assertTrue(out.contains("Item: " + cucumber.getName()));
-		
 	}
 
 }

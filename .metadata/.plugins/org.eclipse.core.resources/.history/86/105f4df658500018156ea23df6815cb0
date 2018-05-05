@@ -1,0 +1,33 @@
+package model;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import DBHandler.ItemDTO;
+
+public class SaleTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void addItemToSaleValidtest() {
+		//fail("Not yet implemented");
+		Sale sale = new Sale();
+		ItemDTO itemDTO = new ItemDTO("Cucumber", 15, new ItemIdentifierDTO(1));
+		SaleDTO saleDTO = sale.addItemToSale(itemDTO);
+		
+		
+		assertEquals(15, saleDTO.getPrice(), 0.01);
+		
+	}
+
+}

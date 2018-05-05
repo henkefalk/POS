@@ -1,14 +1,17 @@
 package model;
 
-import DBHandler.Item;
+import java.util.*;
+import DBHandler.ItemDTO;
 
 public class SaleDTO {
-	double runningTotal;
-	Item lastScannedItem;
+	private final double runningTotal;
+	private final ItemDTO lastScannedItem;
+	private final HashMap scannedItems;
 	
-	public SaleDTO(double runningTotal, Item newItem) {
+	public SaleDTO(double runningTotal, ItemDTO newItem, HashMap<ItemDTO, Integer> scannedItems) {
 		this.runningTotal = runningTotal;
 		lastScannedItem = newItem;
+		this.scannedItems = scannedItems;
 	}
 	
 	
@@ -18,7 +21,13 @@ public class SaleDTO {
 	public String toString() {
 		String printOut = "Item: " + lastScannedItem.getName() + "\n";
 		printOut += "Price: " + Double.toString(lastScannedItem.getPrice()) + "\n"; 
-		printOut += "Running Total" + Double.toString(runningTotal);
+		printOut += "Running Total: " + Double.toString(runningTotal) + "\n";
 		return printOut;
 	}
+	
+	public double getPrice() {
+		return runningTotal;
+	}
+	
+	
 }

@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="DBHandler.Item"/>
+<fullyQualifiedTypeName name="model.ItemIdentifier"/>
+<fullyQualifiedTypeName name="model.SaleDTO"/>
+<fullyQualifiedTypeName name="DBHandler.ItemDTO"/>
+<fullyQualifiedTypeName name="DBHandler.ItemCatalog"/>
+<fullyQualifiedTypeName name="DBHandler.ItemCatalogCreator"/>
+<fullyQualifiedTypeName name="model.ItemIdentifierDTO"/>
+<fullyQualifiedTypeName name="model.Sale"/>
+</qualifiedTypeNameHistroy>
