@@ -1,0 +1,14 @@
+package se.kth.IV350.model;
+
+public class Receipt {
+
+	/**
+	 * creates a receipt to be sent to the printer
+	 * 
+	 * @param saleInformation
+	 *            the final state of sale
+	 */
+	public Receipt(SaleDTO saleInformation) {
+	}
+
+}

@@ -1,0 +1,23 @@
+package se.kth.IV1350.integration;
+
+import se.kth.IV350.model.SaleDTO;
+
+/**
+ * This class represents the external accounting system
+ * @author Henrik
+ *
+ */
+
+public class AccountingSystem {
+
+	/**
+	 * This is were the database would log the sale
+	 * 
+	 * @param saleInformation
+	 *            the information from the latest sale
+	 */
+	public static void logSale(SaleDTO saleInformation) {
+
+	}
+
+}

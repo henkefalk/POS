@@ -11,3 +11,14 @@
 1525620944960	Delete element
 1525620972549	Rename package 'se.kth.IV350.DBHandler'
 1525623450750	Rename type 'SaleTest'
+1525634744060	Delete element
+1525634775031	Delete element
+1525642769834	Infer generic type arguments
+1525642917742	Rename package 'se.kth.IV350.controller'
+1525642925567	Rename package 'se.kth.IV350.integration'
+1525642932363	Rename package 'se.kth.IV350.model'
+1525642959144	Rename package 'se.kth.IV350.startUp'
+1525642965898	Rename package 'se.kth.IV350.view'
+1525643005255	Move compilation unit
+1525643067755	Move compilation unit
+1525643077996	Delete element

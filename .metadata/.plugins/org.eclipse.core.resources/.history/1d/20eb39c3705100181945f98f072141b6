@@ -1,0 +1,14 @@
+package se.kth.IV350.model;
+
+public class Tax {
+	private final double taxPercentage = 12.5;
+
+	/**
+	 * 
+	 * @param priceWithoutTax the total price without taxes included
+	 * @return
+	 */
+	public double getPriceWithTax(double priceWithoutTax) {
+		return priceWithoutTax + ((taxPercentage / 100) * priceWithoutTax);
+	}
+}

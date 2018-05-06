@@ -1,0 +1,51 @@
+package se.kth.IV1350.integration;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import se.kth.IV1350.model.ItemIdentifierDTO;
+
+public class ItemDTOTester {
+	ItemDTO baseObject;
+	
+	@Before
+	public void setUp() throws Exception {
+		ItemIdentifierDTO cucumberInfo = new ItemIdentifierDTO(1);
+		baseObject = new ItemDTO("cucumber", 10, cucumberInfo);
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void equalsValidTest() {
+		ItemIdentifierDTO cucumberInfo = new ItemIdentifierDTO(1);
+		ItemDTO compareObject = new ItemDTO("cucumber", 10, cucumberInfo);
+		assertFalse(baseObject.equals(compareObject));
+	}
+
+}
+
+//TODO skrive test för jämförelsen, teste med valid, felaktigt namn, felaktigt pris, felaktigt ID, och felaktigt objekt
+//skapa ett basobjekt i before för jämförelse
+
+/*
+@Override
+public boolean equals(Object objectToCompare) {
+	if (objectToCompare instanceof ItemDTO) {
+		ItemDTO compare = (ItemDTO) objectToCompare;
+		return itemIdentifier == compare.getItemIdentifier();
+	}
+	return false;
+}
+
+public ItemDTO(String itemName, double price, ItemIdentifierDTO identifier) {
+	this.itemName = itemName;
+	itemPrice = price;
+	itemIdentifier = identifier;
+}
+*/

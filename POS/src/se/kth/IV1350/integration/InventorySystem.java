@@ -1,0 +1,17 @@
+package se.kth.IV1350.integration;
+
+import se.kth.IV1350.model.SaleDTO;
+
+public class InventorySystem {
+
+	/**
+	 * This is were the item inventory would be updated
+	 * 
+	 * @param saleInformation
+	 *            the information from the latest sale
+	 */
+	public static void updateInventory(SaleDTO saleInformation) {
+
+	}
+
+}

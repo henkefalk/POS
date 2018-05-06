@@ -1,0 +1,53 @@
+package se.kth.IV350.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import se.kth.IV350.integration.ItemDTO;
+
+public class SaleTester {
+	Sale sale;
+	ItemDTO cucumberItem = new ItemDTO("cucumber", 10, itemInfo);
+
+	@Before
+	public void setUp() throws Exception {
+		Sale sale = new Sale();
+
+		ItemIdentifierDTO itemInfo = new ItemIdentifierDTO(1);
+		SaleDTO saleDTO = sale.addItemToSale(itemDTO);
+		
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void addItemToSaleValidtest() {
+		saleDTO = sale.addItemToSale(itemDTO);
+		
+		int quantity = sale.scannedItems.get(itemDTO);
+		
+		assertEquals(2, quantity);
+	}
+	
+	@Test
+	public void calculateChangeValidTest() {
+		double payment = 50;
+		
+		Sale sale = new Sale();		
+		ItemIdentifierDTO itemInfo = new ItemIdentifierDTO(1);
+		ItemDTO itemDTO = new ItemDTO("cucumber", 10, itemInfo);
+		sale.addItemToSale(itemDTO);
+		
+		double change = sale.calculateChange(payment);
+		assertEquals(40, change, 0);
+	}
+	
+	
+	
+}
+

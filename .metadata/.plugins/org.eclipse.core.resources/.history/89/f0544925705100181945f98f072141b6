@@ -1,0 +1,14 @@
+package se.kth.IV350.integration;
+
+import se.kth.IV350.model.Receipt;
+
+public class Printer {
+
+	/**
+	 * 
+	 * @param receipt the receipt from the sale
+	 */
+	public static void printReceipt(Receipt receipt) {
+
+	}
+}

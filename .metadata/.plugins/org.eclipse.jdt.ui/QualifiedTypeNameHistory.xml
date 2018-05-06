@@ -16,4 +16,6 @@
 <fullyQualifiedTypeName name="se.kth.IV350.model.Receipt"/>
 <fullyQualifiedTypeName name="se.kth.IV350.integration.Printer"/>
 <fullyQualifiedTypeName name="se.kth.IV350.controller.Controller"/>
+<fullyQualifiedTypeName name="se.kth.IV350.model.ItemIdentifierDTO"/>
+<fullyQualifiedTypeName name="se.kth.IV1350.model.Sale"/>
 </qualifiedTypeNameHistroy>

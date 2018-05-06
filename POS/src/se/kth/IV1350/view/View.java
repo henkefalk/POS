@@ -1,0 +1,90 @@
+package se.kth.IV1350.view;
+
+import se.kth.IV1350.controller.Controller;
+import se.kth.IV1350.model.ItemIdentifierDTO;
+import se.kth.IV1350.model.SaleDTO;
+
+public class View {
+	private Controller controller;
+
+	// constructor
+	public View(Controller controller) {
+		this.controller = controller;
+	}
+
+	/**
+	 * A sample execution with hard-coded calls to the controller
+	 */
+	public void sampleExecution() {
+		ItemIdentifierDTO cucumber = new ItemIdentifierDTO(1);
+		ItemIdentifierDTO lemon = new ItemIdentifierDTO(2);
+		ItemIdentifierDTO apple = new ItemIdentifierDTO(3);
+		ItemIdentifierDTO watermelon = new ItemIdentifierDTO(4);
+		ItemIdentifierDTO kiwi = new ItemIdentifierDTO(5);
+		SaleDTO saleDTO;
+		double customersPayment = 100;
+		double change;
+
+		System.out.println("Starting sample execution");
+		System.out.println();
+		controller.startSale();
+
+		System.out.println("The Cashier starts scanning items");
+		System.out.println();
+
+		saleDTO = controller.registerItem(cucumber);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		saleDTO = controller.registerItem(lemon);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		saleDTO = controller.registerItem(apple);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		saleDTO = controller.registerItem(apple);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		saleDTO = controller.registerItem(watermelon);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		saleDTO = controller.registerItem(kiwi);
+		System.out.println(newScannedItemPrint(saleDTO));
+
+		System.out.println("Cashier indicates that all items are registered");
+		System.out.println();
+
+		saleDTO = controller.finishSale();
+		System.out.println(totalPricePrint(saleDTO));
+
+		System.out.println("Cashier enters amount paid");
+		System.out.println();
+
+		change = controller.handlePayment(customersPayment, saleDTO);
+		System.out.println(changePrint(change));
+	}
+
+	private String newScannedItemPrint(SaleDTO currentStateOfSale) {
+		String printFormat = "Item: %s\n" + "Price: %.2f kr\n" + "Running total: %.2f kr\n";
+
+		String text = String.format(printFormat, currentStateOfSale.getNameOfLatestItem(),
+				currentStateOfSale.getPriceOfLatestItem(), currentStateOfSale.getRunningTotal());
+
+		return text;
+	}
+
+	private String totalPricePrint(SaleDTO finalStateOfSale) {
+		String printFormat = "Total Price: %.2f kr\n";
+		String text = String.format(printFormat, finalStateOfSale.getRunningTotal());
+
+		return text;
+	}
+
+	private String changePrint(double change) {
+		String printFormat = "Change: %.0f kr\n";
+
+		String text = String.format(printFormat, change);
+
+		return text;
+	}
+
+}

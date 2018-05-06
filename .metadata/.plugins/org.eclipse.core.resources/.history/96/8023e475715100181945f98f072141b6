@@ -1,0 +1,15 @@
+package se.kth.IV350.integration;
+
+import se.kth.IV350.model.SaleDTO;
+
+public class AccountingSystem {
+
+	/**
+	 * This is were the database would log the sale
+	 * @param saleInformation the information from the latest sale
+	 */
+	public static void logSale(SaleDTO saleInformation) {
+		
+	}
+
+}
