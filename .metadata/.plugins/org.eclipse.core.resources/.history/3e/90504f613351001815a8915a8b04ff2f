@@ -1,0 +1,45 @@
+package se.kth.IV350.controller;
+
+import se.kth.IV350.DBHandler.ItemCatalogCreator;
+import se.kth.IV350.DBHandler.ItemDTO;
+import se.kth.IV350.DBHandler.Printer;
+import se.kth.IV350.model.ItemIdentifierDTO;
+import se.kth.IV350.model.Sale;
+import se.kth.IV350.model.SaleDTO;
+
+public class Controller {
+	private Sale sale;
+	ItemCatalogCreator itemcatalogcreator;
+	
+	//constructor
+	public Controller(ItemCatalogCreator itemCatalogCreator) {
+		this.itemcatalogcreator = itemCatalogCreator;
+	}
+	
+	/**
+	 * creates a new instance of a sale
+	 */
+	public void startSale(){
+		this.sale = new Sale();
+	}
+	
+	/**
+	 * Finds the item with the matching ItemIdentifier in the ItemCatalog and adds it to the Sale.
+	 * @param itemToBePurchased The ItemIdentifier of the next item to be purchased
+	 * @return returns the current state of Sale
+	 */
+	public SaleDTO registerItem(ItemIdentifierDTO itemToBePurchased) {
+		ItemDTO newScannedItem = (itemcatalogcreator.getItemCatalog()).getItem(itemToBePurchased);
+		return sale.addItemToSale(newScannedItem);
+		
+	}
+	
+	/**
+	 * 
+	 * @return
+	 */
+	public SaleDTO finishSale() {
+		return sale.getTotalSale();
+	}
+	
+}

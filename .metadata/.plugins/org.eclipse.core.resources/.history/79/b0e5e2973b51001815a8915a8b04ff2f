@@ -1,0 +1,40 @@
+package se.kth.IV350.model;
+
+import java.util.*;
+
+import se.kth.IV350.DBHandler.ItemDTO;
+
+public class Sale {
+	double runningTotal;
+	Tax tax = new Tax();
+	
+	HashMap<ItemDTO, Integer> scannedItems = new HashMap <ItemDTO, Integer>();
+	
+	/**
+	 * Adds the new item to the sale or increases the quantity if the same item 
+	 * already has been scanned, and updates the running total.
+	 * 
+	 * @param newScannedItem The item to be added to sale
+	 * @return The current state of Sale, with updated runningTotal
+	 */
+	public SaleDTO addItemToSale(ItemDTO newScannedItem) {
+		runningTotal += newScannedItem.getPrice();
+		//TODO: ContainsKey(itemDTO) instead of if
+		
+		if(scannedItems.get(newScannedItem) == null) {
+			scannedItems.put(newScannedItem, 1);
+		} else {
+			Integer quantity = scannedItems.get(newScannedItem);
+			quantity += 1;
+			scannedItems.put(newScannedItem, quantity);
+		}
+		
+		return new SaleDTO(runningTotal, newScannedItem, scannedItems);
+	}
+
+	public SaleDTO getTotalSale() {
+		double totalPrice = tax.getPriceWithTax(runningTotal);
+		return new SaleDTO(totalPrice, scannedItems);		
+	}
+	
+}

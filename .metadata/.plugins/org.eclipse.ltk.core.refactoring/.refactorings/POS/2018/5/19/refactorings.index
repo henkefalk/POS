@@ -1,0 +1,13 @@
+1525606674175	Rename type 'tax'
+1525612059163	Rename package 'controller'
+1525612115409	Rename package 'DBHandler'
+1525612134221	Rename package 'model'
+1525612157659	Rename package 'startUp'
+1525612219792	Rename package 'view'
+1525614306270	Rename field 'ScannedItems'
+1525615303505	Delete element
+1525620879051	Move compilation unit
+1525620938889	Move compilation units
+1525620944960	Delete element
+1525620972549	Rename package 'se.kth.IV350.DBHandler'
+1525623450750	Rename type 'SaleTest'

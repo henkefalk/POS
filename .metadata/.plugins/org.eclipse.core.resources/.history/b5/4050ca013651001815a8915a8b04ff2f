@@ -1,0 +1,15 @@
+package se.kth.IV350.DBHandler;
+
+// TODO: Class is not needed, use ItemCatalog directly
+public class ItemCatalogCreator {
+	ItemCatalog itemCatalog;
+	
+	public ItemCatalogCreator() {
+		itemCatalog = new ItemCatalog();
+	}
+	
+	public ItemCatalog getItemCatalog() {
+		return itemCatalog;
+	}
+	
+}

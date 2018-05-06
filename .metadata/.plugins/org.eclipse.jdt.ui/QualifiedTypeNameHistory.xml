@@ -8,4 +8,12 @@
 <fullyQualifiedTypeName name="DBHandler.ItemCatalogCreator"/>
 <fullyQualifiedTypeName name="model.ItemIdentifierDTO"/>
 <fullyQualifiedTypeName name="model.Sale"/>
+<fullyQualifiedTypeName name="se.kth.IV350.DBHandler.ItemCatalog"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.IdentifierHelper"/>
+<fullyQualifiedTypeName name="se.kth.IV350.DBHandler.ItemDTO"/>
+<fullyQualifiedTypeName name="se.kth.IV350.integration.InventorySystem"/>
+<fullyQualifiedTypeName name="se.kth.IV350.integration.AccountingSystem"/>
+<fullyQualifiedTypeName name="se.kth.IV350.model.Receipt"/>
+<fullyQualifiedTypeName name="se.kth.IV350.integration.Printer"/>
+<fullyQualifiedTypeName name="se.kth.IV350.controller.Controller"/>
 </qualifiedTypeNameHistroy>

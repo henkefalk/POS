@@ -1,0 +1,21 @@
+package se.kth.IV350.startUp;
+
+import se.kth.IV350.DBHandler.ItemCatalogCreator;
+import se.kth.IV350.controller.Controller;
+import view.View;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ItemCatalogCreator itemCatalogCreator = new ItemCatalogCreator();
+		
+		
+		Controller controller = new Controller(itemCatalogCreator);
+		
+		View view = new View(controller);
+		
+		view.sampleExecution();
+	}
+
+}

@@ -1,0 +1,9 @@
+package model;
+
+public class tax {
+	private final double taxPercentage = 12.5;
+	
+	public double getPriceWithTax(double priceWithoutTax) {
+		return priceWithoutTax + ((taxPercentage/100) * priceWithoutTax);
+	}
+}

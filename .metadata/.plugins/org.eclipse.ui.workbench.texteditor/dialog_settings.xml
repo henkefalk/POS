@@ -2,12 +2,21 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="newScannedItem" key="selection"/>
+		<item value="kiwi" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="fifthItem"/>
+			<item value="fourthItem"/>
+			<item value="thirdItem"/>
+			<item value="secondItem"/>
+			<item value="firstItem"/>
+			<item value="printer"/>
+			<item value="System.out.println(saleDTO.toString());"/>
+			<item value="System.out.println(newScannedItemPrinter(saleDTO));"/>
+			<item value="toString"/>
 			<item value="scannedItem"/>
 			<item value="equals"/>
 			<item value="Item"/>
@@ -15,6 +24,13 @@
 			<item value="ItemIdentifierDTO"/>
 		</list>
 		<list key="replacehistory">
+			<item value="kiwi"/>
+			<item value="watermelon"/>
+			<item value="apple"/>
+			<item value="lemon"/>
+			<item value="cucumber"/>
+			<item value="Print"/>
+			<item value="System.out.println(newScannedItemPrinter(saleDTO));"/>
 			<item value="newScannedItem"/>
 		</list>
 	</section>
